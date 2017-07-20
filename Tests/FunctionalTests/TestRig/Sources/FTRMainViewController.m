@@ -87,7 +87,7 @@ static NSString *gTableViewIdentifier = @"TableViewIdentifier";
   self.tableview.dataSource = self;
 
   // Making the nav bar not translucent so it won't cover UI elements.
-  [self.navigationController.navigationBar setTranslucent:NO];
+  [self.navigationController.navigationBar setTranslucent:YES];
 }
 
 // If we find that the orientation of the device / simulator is not

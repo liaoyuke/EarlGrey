@@ -46,6 +46,11 @@
 }
 
 - (void)openTestViewNamed:(NSString *)name {
+	// Test hangs here if tries to scroll a navigation view to the top with the
+  // navigation bar being translucent.
+  [[EarlGrey selectElementWithMatcher:grey_kindOfClass([UITableView class])]
+   performAction:grey_scrollToContentEdge(kGREYContentEdgeTop)];
+
   // Attempt to open the named view, the views are listed as a rows of a UITableView and tapping
   // it opens the view.
   NSError *error;
